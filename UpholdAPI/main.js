@@ -1,24 +1,17 @@
-function searchCurrencyPair() {
-	var busqueda = $('#currencyPair').val();
-	UpholdAPI(busqueda);
-}
-
-function UpholdAPI(currencyPair) {
-
+function UpholdTicker(iCurrencyPair) {
 	$.ajax({
-		url:'upholdAPI.php',
+		url: 'upholdAPI.php',
 		dataType: 'json',
 		data: {
-			currencyPair: currencyPair
+			currencyPair: iCurrencyPair
 		},
 		type:'POST'
 	}).done(function(response) {
 		var data = "";
 
-		if (response.length !== undefined) {
+		if(response.length !== undefined) {
 			for (i in response){
 				var id = parseInt(i) + 1;
-
 				data += '<tr>';
 				data += '<th scope="row">'+ id +'</th>';
 				data += '<td>'+ response[i].currency +'</td>';
@@ -26,7 +19,6 @@ function UpholdAPI(currencyPair) {
 				data += '<td>'+ response[i].bid +'</td>';
 				data += '<td>'+ response[i].ask +'</td>';
 				data += '</tr>';
-
 			}
 		}else{
 				$("#thPair").remove();
@@ -38,11 +30,7 @@ function UpholdAPI(currencyPair) {
 				data += '</tr>';
 		}
 
-
 		$("#contentCurrencyPair").append(data);
-		// console.log('Tamaño FOR: ' + size);
-		// console.log('Nombres FOR: ' + name);
 
 	});
 }
-UpholdAPI();

@@ -16,8 +16,8 @@
   		<div class="form-inline">
 		    <div class="mx-auto">
 		    	<label for="currencyPair" class="sr-only">Currency or Pair</label>
-			    <input type="text" class="form-control text-uppercase" id="currencyPair" placeholder="Currency or Pair" onclick="UpholdAPI(this.value)">
-			    <input type="button" value="Searh" class="form-control" onclick="searchCurrencyPair()">
+			    <input type="text" class="form-control text-uppercase" id="iCurrencyPair" placeholder="Currency or Pair" onkeyup="UpholdTicker($(this).value);">
+			    <input type="button" value="Searh" class="form-control" onclick="">
 		    </div>
   		</div>
   	</section>
@@ -50,6 +50,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   	<!-- MY JAVASCRIPT CODE  -->
     <script type="text/javascript" src="main.js"></script>
-
   </body>
 </html>
