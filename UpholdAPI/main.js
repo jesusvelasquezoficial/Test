@@ -1,15 +1,15 @@
 function searchCurrencyPair() {
-	var busqueda = $('#searchCP').val();
+	var busqueda = $('#currencyPair').val();
 	UpholdAPI(busqueda);
 }
 
-function UpholdAPI(params) {
+function UpholdAPI(currencyPair) {
 
 	$.ajax({
-		url:'UpholdAPI.php',
+		url:'upholdAPI.php',
 		dataType: 'json',
 		data: {
-			currencyPair: params
+			currencyPair: currencyPair
 		},
 		type:'POST'
 	}).done(function(response) {
@@ -18,7 +18,7 @@ function UpholdAPI(params) {
 		if (response.length !== undefined) {
 			for (i in response){
 				var id = parseInt(i) + 1;
-			
+
 				data += '<tr>';
 				data += '<th scope="row">'+ id +'</th>';
 				data += '<td>'+ response[i].currency +'</td>';
@@ -37,7 +37,7 @@ function UpholdAPI(params) {
 				data += '<td>'+ response.ask +'</td>';
 				data += '</tr>';
 		}
-		
+
 
 		$("#contentCurrencyPair").append(data);
 		// console.log('Tamaño FOR: ' + size);

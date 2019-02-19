@@ -15,9 +15,9 @@
   	<section class="m-3">
   		<div class="form-inline">
 		    <div class="mx-auto">
-		    	<label for="campoCurrencyPair" class="sr-only">Email address</label>
-			    <input type="text" class="form-control text-uppercase" id="searchCP" placeholder="Currency or Pair">
-			    <input type="button" name="Searh" class="form-control" onclick="searchCurrencyPair()">
+		    	<label for="currencyPair" class="sr-only">Currency or Pair</label>
+			    <input type="text" class="form-control text-uppercase" id="currencyPair" placeholder="Currency or Pair" onclick="UpholdAPI(this.value)">
+			    <input type="button" value="Searh" class="form-control" onclick="searchCurrencyPair()">
 		    </div>
   		</div>
   	</section>
