@@ -22,12 +22,15 @@ function UpholdTicker(iCurrencyPair) {
 				data += '</tr>';
 			}
 		}else{
+			var compra = parseFloat(res.bid);
+				compra = compra*0.65/100;
+			compra = parseFloat(res.ask)-compra;
 				$("#thPair").hide();
 				data += '<tr>';
 				data += '<th scope="row">1</th>';
 				data += '<td>'+ res.currency +'</td>';
-				data += '<td>'+ res.bid +'</td>';
 				data += '<td>'+ res.ask +'</td>';
+				data += '<td>'+ compra +'</td>';
 				data += '</tr>';
 		}
 

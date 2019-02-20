@@ -16,7 +16,7 @@
   		<div class="form-inline">
 		    <div class="mx-auto">
 		    	<label for="currencyPair" class="sr-only">Currency or Pair</label>
-			    <input type="text" class="form-control text-uppercase text-center" id="iCurrencyPair" placeholder="Currency or Pair" onkeyup="UpholdTicker($(this).val().toUpperCase());">
+			    <input type="text" class="form-control text-uppercase text-center" value="BTCUSD" id="iCurrencyPair" placeholder="Currency or Pair" onkeyup="UpholdTicker($(this).val().toUpperCase());">
 		    </div>
   		</div>
   	</section>
@@ -38,9 +38,6 @@
 	  		</table>
   		</div>
   	</section>
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
