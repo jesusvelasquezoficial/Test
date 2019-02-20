@@ -6,27 +6,28 @@ function UpholdTicker(iCurrencyPair) {
 			currencyPair: iCurrencyPair
 		},
 		type:'POST'
-	}).done(function(response) {
+	}).done(function(res) {
 		var data = "";
 
-		if(response.length !== undefined) {
-			for (i in response){
+		if(res.length !== undefined) {
+			$("#thPair").show();
+			for (i in res){
 				var id = parseInt(i) + 1;
 				data += '<tr>';
 				data += '<th scope="row">'+ id +'</th>';
-				data += '<td>'+ response[i].currency +'</td>';
-				data += '<td>'+ response[i].pair +'</td>';
-				data += '<td>'+ response[i].bid +'</td>';
-				data += '<td>'+ response[i].ask +'</td>';
+				data += '<td>'+ res[i].currency +'</td>';
+				data += '<td>'+ res[i].pair +'</td>';
+				data += '<td>'+ res[i].bid +'</td>';
+				data += '<td>'+ res[i].ask +'</td>';
 				data += '</tr>';
 			}
 		}else{
-				$("#thPair").remove();
+				$("#thPair").hide();
 				data += '<tr>';
 				data += '<th scope="row">1</th>';
-				data += '<td>'+ response.currency +'</td>';
-				data += '<td>'+ response.bid +'</td>';
-				data += '<td>'+ response.ask +'</td>';
+				data += '<td>'+ res.currency +'</td>';
+				data += '<td>'+ res.bid +'</td>';
+				data += '<td>'+ res.ask +'</td>';
 				data += '</tr>';
 		}
 

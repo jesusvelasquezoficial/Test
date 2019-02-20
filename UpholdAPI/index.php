@@ -28,7 +28,7 @@
 				<thead>
 					<tr>
 					  <th scope="col">#</th>
-					  <th scope="col">Currency</th>
+					  <th scope="col" id="thCurrency">Currency</th>
 					  <th scope="col" id="thPair">Pair</th>
 					  <th scope="col">Compra</th>
 					  <th scope="col">Venta</th>
