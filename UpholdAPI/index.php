@@ -16,8 +16,7 @@
   		<div class="form-inline">
 		    <div class="mx-auto">
 		    	<label for="currencyPair" class="sr-only">Currency or Pair</label>
-			    <input type="text" class="form-control text-uppercase" id="iCurrencyPair" placeholder="Currency or Pair" onkeyup="UpholdTicker($(this).value);">
-			    <input type="button" value="Searh" class="form-control" onclick="">
+			    <input type="text" class="form-control text-uppercase text-center" id="iCurrencyPair" placeholder="Currency or Pair" onkeyup="UpholdTicker($(this).val().toUpperCase());">
 		    </div>
   		</div>
   	</section>

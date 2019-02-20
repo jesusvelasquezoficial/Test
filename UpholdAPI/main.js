@@ -1,6 +1,6 @@
 function UpholdTicker(iCurrencyPair) {
 	$.ajax({
-		url: 'upholdAPI.php',
+		url: 'UpholdAPI.php',
 		dataType: 'json',
 		data: {
 			currencyPair: iCurrencyPair
@@ -30,7 +30,7 @@ function UpholdTicker(iCurrencyPair) {
 				data += '</tr>';
 		}
 
-		$("#contentCurrencyPair").append(data);
+		$("#contentCurrencyPair").html(data);
 
 	});
 }
